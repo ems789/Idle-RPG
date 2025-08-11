@@ -4,22 +4,21 @@ using System.Diagnostics;
 using UnityEngine;
 using UnityEngine.UIElements;
 
-public class Player : MonoBehaviour
+public class Player : Character
 {
-    private float speed = 3f;
-    private float attackRange = .5f;
     private bool isFind = false;
     private GameObject enemy;
-    private Rigidbody2D rb;
 
     private BoxCollider2D enemyCollider;
-    private Animator animator;
 
     // Start is called before the first frame update
     void Start()
     {
-        rb = GetComponent<Rigidbody2D>();
-        animator = GetComponent<Animator>();
+    }
+
+    protected override void UpdateTarget()
+    {
+        
     }
 
     // Update is called once per frame
