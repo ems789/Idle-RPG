@@ -10,6 +10,7 @@ public abstract class Character : MonoBehaviour
     public int attackDamage = 1;
     public float attackRange = .5f;
     public float moveSpeed = 3f;
+    public bool canAttack = false;
 
     protected Character target;
 
@@ -27,7 +28,11 @@ public abstract class Character : MonoBehaviour
     protected virtual void Update()
     {
         UpdateTarget();
+        Move();
+        Attack();
     }
 
     protected abstract void UpdateTarget();
+    protected abstract void Move();
+    protected abstract void Attack();
 }
